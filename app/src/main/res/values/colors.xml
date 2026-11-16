@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lavender_1">#B39BFA</color>
+    <color name="lavender_2">#A084F5</color>
+    <color name="lavender_3">#C8B7FD</color>
+    <color name="screen_bg">#F8F6FE</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="ink">#241D47</color>
+    <color name="ink_soft">#4A4270</color>
+    <color name="muted">#9A94B8</color>
+    <color name="line">#EFEAF9</color>
+    <color name="violet">#7C5CE6</color>
+    <color name="violet_soft">#EFE8FF</color>
+    <color name="orange">#FF7A45</color>
+    <color name="orange_soft">#FFE9DD</color>
+    <color name="green">#2FBF71</color>
+    <color name="blue">#5B8DEF</color>
+    <color name="red">#F4657C</color>
+    <color name="teal">#22B8A6</color>
+    <color name="navy">#2B2350</color>
+    <color name="chip_doc">#EFE8FF</color>
+    <color name="chip_pic">#E4F1FF</color>
+    <color name="chip_vid">#FFE9E9</color>
+    <color name="chip_aud">#FFE6F2</color>
+    <color name="storage_start">#A87CF6</color>
+    <color name="storage_end">#7A49E0</color>
+    <color name="clear_start">#FF9A4D</color>
+    <color name="clear_end">#FF5F6D</color>
+    <color name="selected_bg">#F3F7FF</color>
+    <color name="selected_border">#89A6FF</color>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Nooxe File</string>
+    <string name="storage_total">Total Storage</string>
+    <string name="internal">Internal</string>
+    <string name="external">External</string>
+    <string name="clear_up_space">Clear Up Space</string>
+    <string name="recent_files">Recent files</string>
+    <string name="folder">Folder</string>
+    <string name="selected_items">Selected %d item(s)</string>
+    <string name="search">Search</string>
+    <string name="new_folder">New Folder</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="tag">Tag</string>
+    <string name="more">More</string>
+    <string name="sort">Sort</string>
+    <string name="sort_recent">Recent</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_size">Size</string>
+    <string name="items_count">%d items</string>
+    <string name="total_size">%s</string>
+    <string name="freed_space">Freed %s</string>
+    <string name="files_deleted">%d files deleted</string>
+    <string name="folder_created">Folder created</string>
+    <string name="link_copied">Share link copied</string>
+    <string name="tagged">Tagged %d item(s)</string>
+    <string name="back">Back</string>
+    <string name="no_items">No files here</string>
+</resources>

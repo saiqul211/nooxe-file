@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header (normal mode) -->
+        <LinearLayout
+            android:id="@+id/headerNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_white"
+                android:padding="7dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/folder"
+                android:textColor="@color/ink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_white"
+                android:padding="7dp"
+                android:src="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/btnViewToggle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_circle_white"
+                android:padding="7dp"
+                android:src="@drawable/ic_grid" />
+        </LinearLayout>
+
+        <!-- Header (selection mode) -->
+        <LinearLayout
+            android:id="@+id/headerSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/btnCloseSelect"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_navy"
+                android:padding="8dp"
+                android:src="@drawable/ic_close" />
+
+            <TextView
+                android:id="@+id/tvSelectedCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/ink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnMore"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_navy"
+                android:padding="8dp"
+                android:src="@drawable/ic_grid" />
+        </LinearLayout>
+
+        <!-- Breadcrumb -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/breadcrumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- Search box -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_row"
+            android:hint="@string/search"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <!-- Meta -->
+        <TextView
+            android:id="@+id/tvMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/muted"
+            android:textSize="11sp" />
+
+        <!-- List / Grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="90dp" />
+
+        <!-- Empty -->
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/no_items"
+            android:textColor="@color/muted"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- FAB new folder -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewFolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="18dp"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="@color/violet"
+        app:tint="@color/card_white" />
+
+    <!-- Floating toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_toolbar"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/tbTag"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_circle_teal"
+            android:padding="8dp"
+            android:src="@drawable/ic_tag" />
+
+        <ImageView
+            android:id="@+id/tbShare"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_circle_blue"
+            android:padding="8dp"
+            android:src="@drawable/ic_share" />
+
+        <ImageView
+            android:id="@+id/tbDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_circle_red"
+            android:padding="8dp"
+            android:src="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/tbMore"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_circle_navy"
+            android:padding="8dp"
+            android:src="@drawable/ic_dots" />
+    </LinearLayout>
+</FrameLayout>

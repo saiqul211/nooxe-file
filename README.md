@@ -1,0 +1,52 @@
+# Nooxe File
+
+A beautiful, complete **Android file manager app written in Kotlin** — inspired by a [Dribbble concept](https://dribbble.com). Lavender theme, soft shadows, rounded cards, storage donut, list/grid browsing, multi-select and a floating action bar.
+
+## Screens
+
+- **Home** — storage card with animated donut (Total / Used), Internal & External tabs, category grid (Document / Pictures / Video / Audio), recent files, *Clear Up Space*
+- **Folder** — breadcrumb trail, search, sort (recent / name / size), list ⇄ grid toggle
+- **Selection mode** — tap or long-press to select, floating bar with Tag / Share / Delete / More
+- **New folder** — FAB creates a folder in the current directory
+
+## Tech
+
+- Kotlin 1.9 · Android Gradle Plugin 8.5 · Gradle 8.9
+- Material Components (Material 3) · ViewBinding · RecyclerView
+- minSdk 24 · targetSdk 34 · compileSdk 34
+
+## Project layout
+
+```
+app/src/main/java/com/nooxe/file/
+  MainActivity.kt
+  data/FileSystem.kt          # file tree model + mock storage
+  ui/HomeFragment.kt
+  ui/FolderFragment.kt
+  adapter/FileListAdapter.kt
+  adapter/FileGridAdapter.kt
+  view/DonutView.kt           # custom Canvas donut chart
+app/src/main/res/
+  layout/                     # XML layouts
+  drawable/                   # vector icons + shape backgrounds
+  values/                     # colors, strings, themes
+```
+
+## Build
+
+### On GitHub (automated)
+
+`.github/workflows/android.yml` builds the APK on every push to `main`:
+
+1. Push this repo to GitHub
+2. Open **Actions → Build Android APK**
+3. Download the artifact `nooxe-file-debug` (`app-debug.apk`)
+
+### Locally
+
+Requires JDK 17 + the Android SDK.
+
+```bash
+./gradlew assembleDebug
+# APK at app/build/outputs/apk/debug/app-debug.apk
+```
