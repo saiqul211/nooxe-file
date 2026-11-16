@@ -44,7 +44,7 @@ class FolderFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         tab = arguments?.getString(ARG_TAB) ?: "internal"
-        path = (arguments?.getStringArrayList(ARG_PATH) ?: arrayListOf()).toMutableList()
+        path = (arguments?.getStringArrayList(ARG_PATH) ?: arrayListOf<String>()).toMutableList()
         folderName = arguments?.getString(ARG_NAME) ?: "Folder"
     }
 
@@ -149,13 +149,12 @@ class FolderFragment : Fragment() {
         binding.tvTitle.text = folderName
         val files = folder.children.filterIsInstance<FsNode.File>()
             .filter { query.isBlank() || it.name.contains(query, ignoreCase = true) }
-            .sortedWith(
-                when (sortMode) {
-                    1 -> compareBy { it.name.lowercase() }
-                    2 -> compareByDescending { it.sizeMB }
-                    else -> compareBy { it.addedDays }
-                }
-            )
+
+        val sorted = when (sortMode) {
+            1 -> files.sortedBy { it.name.lowercase() }
+            2 -> files.sortedByDescending { it.sizeMB }
+            else -> files.sortedBy { it.addedDays }
+        }
 
         binding.tvMeta.text =
             getString(R.string.items_count, files.size) + "  ·  " +
@@ -167,12 +166,12 @@ class FolderFragment : Fragment() {
         if (isGrid) {
             binding.recycler.layoutManager = GridLayoutManager(requireContext(), 2)
             gridAdapter.selected = selected.toSet()
-            gridAdapter.submit(files)
+            gridAdapter.submit(sorted)
             binding.recycler.adapter = gridAdapter
         } else {
             binding.recycler.layoutManager = LinearLayoutManager(requireContext())
             listAdapter.selected = selected.toSet()
-            listAdapter.submit(files)
+            listAdapter.submit(sorted)
             binding.recycler.adapter = listAdapter
         }
         updateSelectionMode()

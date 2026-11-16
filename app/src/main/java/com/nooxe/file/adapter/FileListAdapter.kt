@@ -3,6 +3,7 @@ package com.nooxe.file.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.nooxe.file.R
 import com.nooxe.file.data.FsNode
 import com.nooxe.file.databinding.ItemFileListBinding
 
@@ -46,16 +47,11 @@ class FileListAdapter(
 
     class VH(val b: ItemFileListBinding) : RecyclerView.ViewHolder(b.root)
 
-    private fun iconFor(kind: String): Int {
-        val r = com.nooxe.file.R.drawable
-        return when (kind) {
-            "fig" -> r.ic_doc
-            "pdf", "doc" -> r.ic_doc
-            "png", "jpg" -> r.ic_pic
-            "mp4" -> r.ic_video
-            "mp3" -> r.ic_audio
-            "zip" -> r.ic_doc
-            else -> r.ic_doc
-        }
+    private fun iconFor(kind: String): Int = when (kind) {
+        "pdf", "doc", "fig", "zip" -> R.drawable.ic_doc
+        "png", "jpg" -> R.drawable.ic_pic
+        "mp4" -> R.drawable.ic_video
+        "mp3" -> R.drawable.ic_audio
+        else -> R.drawable.ic_doc
     }
 }

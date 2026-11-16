@@ -94,12 +94,12 @@ object FileSystem {
         val root = rootFor(tab)
         var removed: FsNode.File? = null
         fun rec(node: FsNode.Folder) {
-            val it = node.children.iterator()
-            while (it.hasNext()) {
-                val c = it.next()
+            val iter = node.children.iterator()
+            while (iter.hasNext()) {
+                val c = iter.next()
                 if (c is FsNode.File && c.id == id) {
                     removed = c
-                    it.remove()
+                    iter.remove()
                     StorageState.usedMB = (StorageState.usedMB - c.sizeMB).coerceAtLeast(0)
                 } else if (c is FsNode.Folder) {
                     rec(c)

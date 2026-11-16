@@ -81,12 +81,13 @@ class HomeFragment : Fragment() {
                 GridLayout.spec(GridLayout.UNDEFINED, 1f)
             ).apply {
                 width = 0
-                height = GridLayout.LayoutParams.WRAP_CONTENT
+                height = ViewGroup.LayoutParams.WRAP_CONTENT
                 setMargins(4, 4, 4, 4)
             }
             b.root.layoutParams = params
             b.ivIcon.setImageResource(c.iconRes)
-            b.ivIcon.setBackgroundColor(resources.getColor(c.chipColor, null))
+            b.ivIcon.backgroundTintList =
+                android.content.res.ColorStateList.valueOf(resources.getColor(c.chipColor, null))
             b.tvName.text = c.name
             b.tvSize.text = c.sizeLabel
             b.root.setOnClickListener { openFolder(listOf(rootId(), c.folderId), c.name) }
