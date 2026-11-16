@@ -1,6 +1,13 @@
 # Nooxe File
 
+[![Build Android APK](https://github.com/saiqul211/nooxe-file/actions/workflows/android.yml/badge.svg)](https://github.com/saiqul211/nooxe-file/actions/workflows/android.yml)
+[![Download APK](https://img.shields.io/badge/Download-APK-7C5CE6)](https://github.com/saiqul211/nooxe-file/releases/latest)
+
 A beautiful, complete **Android file manager app written in Kotlin** — inspired by a [Dribbble concept](https://dribbble.com). Lavender theme, soft shadows, rounded cards, storage donut, list/grid browsing, multi-select and a floating action bar.
+
+## Download
+
+Grab the latest APK from **[Releases](https://github.com/saiqul211/nooxe-file/releases/latest)** → `nooxe-file-v1.0.0.apk` (Android 7.0+).
 
 ## Screens
 
