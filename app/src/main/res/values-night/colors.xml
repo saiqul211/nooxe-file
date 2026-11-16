@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode (Material 3 dark) -->
+    <color name="primary">#8AB4F8</color>
+    <color name="primary_variant">#AECBFA</color>
+    <color name="primary_light">#1A2332</color>
+    <color name="secondary">#81C995</color>
+    <color name="secondary_light">#1E2D24</color>
+    <color name="accent">#FDD663</color>
+    <color name="accent_light">#2E2A1A</color>
+    <color name="error">#F28B82</color>
+    <color name="error_light">#3B2320</color>
+
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="surface_variant">#2A2A2A</color>
+    <color name="surface_container">#252525</color>
+    <color name="surface_container_high">#2F2F2F</color>
+    <color name="outline">#3C4043</color>
+    <color name="outline_variant">#3C4043</color>
+
+    <color name="on_background">#E8EAED</color>
+    <color name="on_surface">#E8EAED</color>
+    <color name="on_surface_variant">#9AA0A6</color>
+    <color name="on_primary">#202124</color>
+
+    <color name="cat_images">#8AB4F8</color>
+    <color name="cat_videos">#F28B82</color>
+    <color name="cat_audio">#81C995</color>
+    <color name="cat_docs">#FDD663</color>
+    <color name="cat_archives">#C58AF9</color>
+    <color name="cat_apps">#4ECDE6</color>
+    <color name="cat_other">#9AA0A6</color>
+
+    <!-- Legacy (kept for compatibility) -->
+    <color name="lavender_1">#8AB4F8</color>
+    <color name="lavender_2">#AECBFA</color>
+    <color name="lavender_3">#1A2332</color>
+    <color name="screen_bg">#121212</color>
+    <color name="card_white">#1E1E1E</color>
+    <color name="ink">#E8EAED</color>
+    <color name="ink_soft">#9AA0A6</color>
+    <color name="muted">#9AA0A6</color>
+    <color name="line">#3C4043</color>
+    <color name="violet">#8AB4F8</color>
+    <color name="violet_soft">#1A2332</color>
+    <color name="orange">#FDD663</color>
+    <color name="orange_soft">#2E2A1A</color>
+    <color name="green">#81C995</color>
+    <color name="blue">#8AB4F8</color>
+    <color name="red">#F28B82</color>
+    <color name="teal">#4ECDE6</color>
+    <color name="navy">#E8EAED</color>
+    <color name="chip_doc">#2E2A1A</color>
+    <color name="chip_pic">#1A2332</color>
+    <color name="chip_vid">#3B2320</color>
+    <color name="chip_aud">#1E2D24</color>
+    <color name="storage_start">#8AB4F8</color>
+    <color name="storage_end">#AECBFA</color>
+    <color name="clear_start">#FDD663</color>
+    <color name="clear_end">#F29900</color>
+    <color name="selected_bg">#1A2332</color>
+    <color name="selected_border">#8AB4F8</color>
+</resources>

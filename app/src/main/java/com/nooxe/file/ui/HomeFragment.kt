@@ -27,7 +27,6 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.btnMenu.setOnClickListener { /* drawer placeholder */ }
         binding.btnSearchHome.setOnClickListener { }
         binding.btnInternal.setOnClickListener { switchTab("internal") }
         binding.btnExternal.setOnClickListener { switchTab("external") }
