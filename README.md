@@ -7,7 +7,15 @@ A beautiful, complete **Android file manager app written in Kotlin** — inspire
 
 ## Download
 
-Grab the latest APK from **[Releases](https://github.com/saiqul211/nooxe-file/releases/latest)** → `nooxe-file-v1.0.0.apk` (Android 7.0+).
+Grab the latest APK from **[Releases](https://github.com/saiqul211/nooxe-file/releases/latest)** → `nooxe-file-v1.1.0.apk` (Android 7.0+).
+
+## File picker integration
+
+Nooxe File registers `ACTION_GET_CONTENT` and `ACTION_OPEN_DOCUMENT` (mime `*/*`), so it shows up in the Android **Open from / Open with** sheet when another app asks for a file (WhatsApp, Messenger, Gmail, …).
+
+Tapping it opens `PickerActivity`, where you browse the tree and pick a file. The pick is returned to the calling app as a `content://` URI served by a `FileProvider`.
+
+> No runtime permission is needed — this is done with intent filters, the standard Android way to expose a file source.
 
 ## Screens
 
